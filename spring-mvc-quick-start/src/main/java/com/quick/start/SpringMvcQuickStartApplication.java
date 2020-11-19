@@ -1,8 +1,12 @@
-package com.quick.start.springmvcquickstart;
+package com.quick.start;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author Aymen Chaaben
+ *
+ */
 @SpringBootApplication
 public class SpringMvcQuickStartApplication {
 

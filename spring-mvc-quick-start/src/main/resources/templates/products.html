@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <link th:href="@{/webjars/bootstrap/3.4.1/css/bootstrap.min.css}" rel="stylesheet" media="screen">
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.5.1/css/jquery.min.css}"></script>
+    <title>hello world</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-offset-2">
+                <div th:if="${not #lists.isEmpty(products)}">
+                    <h2>Product List</h2>
+                    <a class="btn btn-primary" th:href="@{/product/new}"> New Product</a>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Image</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="product : ${products}">
+                                <td th:text="${product.id}"></td>
+                                <td th:text="${product.description}"></td>
+                                <td th:text="${product.price}"></td>
+                                <td> <img th:src="${product.imageUrl}" width="50" height="50"></td>
+                                <td>
+                                    <a th:href="${'/product/'+product.id}">view</a> |
+                                    <a th:href="${'/product/edit/'+product.id}">edit</a> |
+                                    <a th:href="${'/product/delete/'+product.id}">delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
