@@ -7,6 +7,18 @@ public class Product {
 	private String description;
 	private BigDecimal price;
 	private String imageUrl;
+	
+	
+	public Product() {
+		super();
+	}
+	public Product(Integer id, String description, BigDecimal price, String imageUrl) {
+		super();
+		this.id = id;
+		this.description = description;
+		this.price = price;
+		this.imageUrl = imageUrl;
+	}
 	public Integer getId() {
 		return id;
 	}

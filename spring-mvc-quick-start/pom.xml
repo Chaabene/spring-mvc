@@ -40,12 +40,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>compile</scope>
-		</dependency>
+
 
 		<dependency>
 			<groupId>org.webjars</groupId>
@@ -57,6 +52,7 @@
 			<artifactId>bootstrap</artifactId>
 			<version>3.4.1</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>
